@@ -19,6 +19,10 @@ This action requests macOS password.
 ### See all launched frameworks, components, extensions, keyboard extensions, fonts, scripts, services, etc.
 
     $ ls -1A /e*/mach* {,/}L*/{Ad,Compon,Ex,Fram,In,Keyb,La,Mail/Bu,P*P,Priv,Qu,Scripti,Servi,Spo,Sta}* L*/Fonts 2> /dev/null
+    
+For zsh 
+
+    % ls -1A {,/}L*/Fonts L*/Services L*/Keyboard L*/LanguageModeling L*/Mail L*/PreferencePanes L*/PersonalizationPortrait L*/Preferences 2> /dev/null
 
 ### See all login items for system events
 
