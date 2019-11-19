@@ -2,28 +2,28 @@
 
 Check all your services running in background in macOS. These commands are very useful when trying to see what services are lauched in the background, as well as what login items are listed in the system events.
 
-### See status of extensions
+## Getting Started
 
-    $ kextstat -kl | awk '!/com\.apple/{printf "%s %s\n", $6, $7}'
+Setup is actually really easy, just run a .sh or .zsh file, depending on which shell script you use, and you can check all launch deamons, status of extensions, all installed frameworks, components, keyboard extensions, fonts, scripts, background services, etc..
 
-### See launch control list
+### Run
 
-This action requests macOS password.
+Just drag and drop the script file into terminal. Note that it will require your password (if you have) in order to access launch deamons.
 
-    $ sudo launchctl list | sed 1d | awk '!/0x|com\.(apple|openssh|vix)|edu\.mit|org\.(amavis|apache|cups|isc|ntp|postfix|x)/{print $3}'
+If you cannot run the script file because of permissions, just run this command
 
-### See launch deamons
+`$ chmod 755 BackgroundServicesCheck.sh`
 
-    $ launchctl list | sed 1d | awk '!/0x|com\.apple|edu\.mit|org\.(x|openbsd)/{print $3}'
+or
 
-### See all launched frameworks, components, extensions, keyboard extensions, fonts, scripts, services, etc.
+`$ chmod 755 BackgroundServicesCheck.zsh`
 
-    $ ls -1A /e*/mach* {,/}L*/{Ad,Compon,Ex,Fram,In,Keyb,La,Mail/Bu,P*P,Priv,Qu,Scripti,Servi,Spo,Sta}* L*/Fonts 2> /dev/null
-    
-For zsh 
+depending on which shell you use.
 
-    % ls -1A {,/}L*/Fonts L*/Services L*/Keyboard L*/LanguageModeling L*/Mail L*/PreferencePanes L*/PersonalizationPortrait L*/Preferences 2> /dev/null
+## Authors
 
-### See all login items for system events
+* Miljan Vukicevic - Initial work
 
-    $ osascript -e 'tell application "System Events" to get name of every login item' 2> /dev/null
+## License 
+
+This project is licensed under the MIT License - see the LICENSE file for details
