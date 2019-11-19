@@ -1,10 +1,10 @@
 # macOS-Background-Services-check
 
-Check all your services running in background in macOS. These commands are very useful when trying to see what services are lauched in the background, as well as what login items are listed in the system events.
+Check all your services running in background in macOS. These commands are very useful when trying to see what services are launched in the background, as well as what login items are listed in the system events.
 
 ## Getting Started
 
-Setup is actually really easy, just run a .sh or .zsh file, depending on which shell script you use, and you can check all launch deamons, status of extensions, all installed frameworks, components, keyboard extensions, fonts, scripts, background services, etc..
+Setup is actually really easy, just run a `.sh` or `.zsh` file, depending on which shell script you use, and you can check all launch deamons, status of extensions, all installed frameworks, components, keyboard extensions, fonts, scripts, background services, etc..
 
 ### Run
 
