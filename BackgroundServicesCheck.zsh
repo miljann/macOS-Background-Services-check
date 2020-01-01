@@ -3,6 +3,7 @@ kextstat -kl | awk '!/com\.apple/{printf "%s %s\n", $6, $7}'
 
 # Launch control list
 sudo launchctl list | sed 1d | awk '!/0x|com\.(apple|openssh|vix)|edu\.mit|org\.(amavis|apache|cups|isc|ntp|postfix|x)/{print $3}'
+
 # Launch deamons
 launchctl list | sed 1d | awk '!/0x|com\.apple|edu\.mit|org\.(x|openbsd)/{print $3}'
 
